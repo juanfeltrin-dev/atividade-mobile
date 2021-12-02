@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Json implements ContentType {
     @Override
     public ArrayList<ItemModel> handle(Context context) throws JSONException {
-        String content = RequestService.get("http://172.31.160.1/api.json");
+        String content = RequestService.get("http://localhost/api.json");
         ArrayList<ItemModel> items = new ArrayList<>();
         JSONArray jsonArray = null;
 

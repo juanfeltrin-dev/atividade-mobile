@@ -75,7 +75,11 @@ public class RequestService extends AsyncTask<ContentType, Void, ArrayList<ItemM
         try {
             return contentType[0].handle(this.context);
         } catch (Exception exception) {
-            return new ArrayList<>();
+            try {
+                return contentType[1].handle(this.context);
+            } catch (Exception exception1) {
+                return new ArrayList<>();
+            }
         }
     }
 

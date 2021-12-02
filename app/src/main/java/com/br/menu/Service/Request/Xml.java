@@ -25,7 +25,7 @@ public class Xml implements ContentType {
         StrictMode.setThreadPolicy(policy);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-        Document doc = dBuilder.parse("http://172.31.160.1/api.xml");
+        Document doc = dBuilder.parse("http://localhost/api.xml");
         doc.getDocumentElement().normalize();
         NodeList nList = doc.getElementsByTagName("item");
         ArrayList<ItemModel> items = new ArrayList<>();

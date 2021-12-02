@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     getApplicationContext()
             );
 
-            request.execute(new Json());
+            request.execute(new Json(), new Xml());
         } else {
             SQLiteService sqLiteService = new SQLiteService(this);
 
